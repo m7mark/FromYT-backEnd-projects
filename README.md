@@ -9,3 +9,7 @@ https://youtu.be/DOIWQddRD5M
 ##### DEPLOY TO
 
 https://redisapp.netlify.app/
+
+##### ENV:
+
+`REDIS_URL`
