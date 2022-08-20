@@ -3,3 +3,7 @@
 `Node.js`, `node-telegram-bot-api`
 
 https://youtu.be/slcqnHIFrj8
+
+## ENV:
+
+BOT_TOKEN - telegram bot token
