@@ -2,4 +2,8 @@
 
 `Node.js`
 
+#### API
+
+https://openweathermap.org/current
+
 > Work only with VPN from Ru
