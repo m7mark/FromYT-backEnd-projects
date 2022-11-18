@@ -1,9 +1,9 @@
-# Telegram Game, choose number from 0 to 9
+# Telegram Game, gues number from 0 to 9
 
 `Node.js`, `node-telegram-bot-api`
 
 https://youtu.be/slcqnHIFrj8
 
-## ENV:
+##### ENV:
 
-BOT_TOKEN - telegram bot token
+`BOT_TOKEN`

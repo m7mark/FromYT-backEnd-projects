@@ -15,27 +15,29 @@ const startGame = async (chatId) => {
 }
 
 const startBot = () => {
-  bot.setMyCommands([
-    { command: '/start', description: 'Hello in game' },
-  ])
+  bot.setMyCommands([{ command: '/start', description: 'Hello' }])
 
-  bot.on('message', async msg => {
+  bot.on('message', async (msg) => {
     const text = msg.text
     const chatId = msg.chat.id
     switch (text) {
       case '/start':
         await bot.sendMessage(chatId, `Hi! ${msg.chat.first_name}`)
-        await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/422/93d/42293d5f-7cd5-49f6-a8fd-939f71b06a83/192/13.webp', startGameOptions)
-        break;
+        await bot.sendSticker(
+          chatId,
+          'https://tlgrm.ru/_/stickers/422/93d/42293d5f-7cd5-49f6-a8fd-939f71b06a83/192/13.webp',
+          startGameOptions
+        )
+        break
       case '/game':
         startGame(chatId)
-        break;
+        break
       default:
         await bot.sendMessage(chatId, `I don't understand you`)
     }
   })
 
-  bot.on('callback_query', async msg => {
+  bot.on('callback_query', async (msg) => {
     const text = msg.data
     // const messageId = msg.message.message_id
     const chatId = msg.message.chat.id
@@ -46,9 +48,17 @@ const startBot = () => {
       return await startGame(chatId)
     }
     if (+text === chats[chatId]) {
-      return await bot.sendMessage(chatId, `You choose right number ${chats[chatId]} ✅`, againOptions)
+      return await bot.sendMessage(
+        chatId,
+        `You choose right number ${chats[chatId]} ✅`,
+        againOptions
+      )
     } else {
-      return await bot.sendMessage(chatId, `You choose wrong number ${chats[chatId]} 🛑`, againOptions)
+      return await bot.sendMessage(
+        chatId,
+        `You choose wrong number ${chats[chatId]} 🛑`,
+        againOptions
+      )
     }
   })
 }
