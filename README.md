@@ -1,5 +1,5 @@
-# Done (Rest API Users)
+# Rest API Users with postgress
 
-`Node.js`, `express`, `pg` 
+`Node.js`, `express`, `pg`
 
 https://youtu.be/p3RFMEixUOE
