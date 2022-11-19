@@ -13,3 +13,5 @@ https://redisapp.netlify.app/
 ##### ENV:
 
 `REDIS_URL`
+
+> Work only with VPN from Ru
